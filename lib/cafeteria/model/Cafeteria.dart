@@ -1,5 +1,4 @@
-//import 'package:firebase_database/firebase_database.dart';
-
+import 'package:firebase_database/firebase_database.dart';
 
 class Cafeteria{
 
@@ -20,11 +19,11 @@ class Cafeteria{
   String get nombre      => _nombre;
   String get descripcion => _descripcion;
   String get ubicacion   => _ubicacion;
-/*
+
   Cafeteria.fromSnapShot(DataSnapshot snapshot){
      _id          = snapshot.key;
      _nombre      = snapshot.value['nombre'];
      _descripcion = snapshot.value['descripcion'];
      _ubicacion   = snapshot.value['ubicacion'];
-  }*/
+  }
 }

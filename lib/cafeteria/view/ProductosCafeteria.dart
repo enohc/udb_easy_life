@@ -76,7 +76,7 @@ class _ProductosCafetereria extends State<ProductosCafetereria>{
       body: SingleChildScrollView(
         child: Container(
           padding: EdgeInsets.all(0.0),
-          child: _ui(),
+          child: Text("data"),
         ),
       ),
        persistentFooterButtons: <Widget>[
