@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "728693851305",
+    "firebase_url": "https://udb-movil.firebaseio.com",
+    "project_id": "udb-movil",
+    "storage_bucket": "udb-movil.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:728693851305:android:041cdf86e28f6852",
+        "android_client_info": {
+          "package_name": "edu.udb.easylife"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "728693851305-q3d1qc8he8mu00frviblp9u7h0t362ms.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKOm1xCHGsrx5aCtam6JjwxAT7kKT3bQQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "728693851305-q3d1qc8he8mu00frviblp9u7h0t362ms.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:728693851305:android:38c47e88e4aefc9b",
+        "android_client_info": {
+          "package_name": "edu.udb.movil"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "728693851305-q3d1qc8he8mu00frviblp9u7h0t362ms.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKOm1xCHGsrx5aCtam6JjwxAT7kKT3bQQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "728693851305-q3d1qc8he8mu00frviblp9u7h0t362ms.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
