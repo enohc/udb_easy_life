@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:udb_easy_life/cafeteria/model/Cafeteria.dart';
 import 'package:udb_easy_life/cafeteria/view/CafereriaInfo.dart';
+import 'package:udb_easy_life/cafeteria/view/ProductosCafeteria.dart';
 
 class CafeteriaLista extends StatefulWidget {
   @override
@@ -20,7 +21,7 @@ class _CafeteriaLista extends State<CafeteriaLista> {
   void initState(){
     super.initState();
     DatabaseReference db = FirebaseDatabase.instance.reference();
-    db.child('CAFETERIA').once().then((DataSnapshot snap){
+    db.child('CAFETERIA').once().then((DataSnapshot snap) async{
       var keys = snap.value.keys;
       for(var key in keys){
         Cafeteria cafeteria = new Cafeteria(null, key, null, null);
@@ -31,16 +32,7 @@ class _CafeteriaLista extends State<CafeteriaLista> {
 
   @override
   Widget build(BuildContext context) {
-/*
-    DatabaseReference db = FirebaseDatabase.instance.reference();
-    db.child('CAFETERIA').once().then((DataSnapshot snap){
-      var keys = snap.value.keys;
-      for(var key in keys){
-        Cafeteria cafeteria = new Cafeteria(null, key,null, 'Lorem ipsusjsjsjjajkj kjjkjkj jkjkjasjkkj jkjkjk ');
-        items.add(cafeteria);
-      }
-    });
-*/
+
     return Scaffold(      
      appBar: AppBar(
         title: Text("UDB - Cafeterias",style: TextStyle(fontWeight: FontWeight.bold),),
@@ -62,12 +54,10 @@ class _CafeteriaLista extends State<CafeteriaLista> {
                                   ? Image.asset('images/no_imagen.png',
                                     fit: BoxFit.fill,
                                     height: 70.0,
-                                    width: 57.0, 
                                   )
                                   :  Image.asset('images/no_imagen.png',
                                     fit: BoxFit.fill,
                                     height: 70.0,
-                                    width: 57.0, 
                                   )/*Image.network(
                                       '${items[index].nombre}' + '?alt=media',
                                       fit: BoxFit.fill,
@@ -84,12 +74,17 @@ class _CafeteriaLista extends State<CafeteriaLista> {
                             ),
                             ),
                           subtitle: Text('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis turpis eleifend, pharetra justo a, sagittis diam. Etiam purus purus, vestibulum vitae faucibus at, volutpat vel velit.'),
+                          onTap: () {
+                            Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => ProductosCafetereria(items[index]),),
+                            );
+                          },
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),
-              )
+              ),
             ],
           );
         },
@@ -108,10 +103,8 @@ class _CafeteriaLista extends State<CafeteriaLista> {
               title: Text('Crear Cafeteria'),
               onTap: (){
                 //Navigator.pop();
-                 Navigator.push(context, 
-      MaterialPageRoute(builder: (context) => CafeteriaInfo(),
-      )
-    );
+                 Navigator.push(context, MaterialPageRoute(builder: (context) => CafeteriaInfo())
+               );
               },
             )
           ],
